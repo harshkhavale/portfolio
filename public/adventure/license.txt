@@ -1,0 +1,11 @@
+Model Information:
+* title:	A Mysterious Adventure - 3D Editor Challenge
+* source:	https://sketchfab.com/3d-models/a-mysterious-adventure-3d-editor-challenge-4e2519964d4e42d891314777e4258e28
+* author:	Diosmel (https://sketchfab.com/dyvonnet)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A Mysterious Adventure - 3D Editor Challenge" (https://sketchfab.com/3d-models/a-mysterious-adventure-3d-editor-challenge-4e2519964d4e42d891314777e4258e28) by Diosmel (https://sketchfab.com/dyvonnet) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
