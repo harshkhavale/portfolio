@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
-import { git_hub } from "../assets";
+import { github } from "../assets";
 import { fadeIn } from "../utils/motion";
 import { styles } from "../styles";
 
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
                 className=" w-10 h-10 rounded-full hover:w-12 flex justify-center items-center cursor-pointer "
               >
                 <img
-                  src={git_hub}
+                  src={github}
                   alt="github"
                   className=" rounded-full  object-contain"
                 />

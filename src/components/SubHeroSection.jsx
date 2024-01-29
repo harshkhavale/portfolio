@@ -7,17 +7,44 @@ const SubHeroSection = () => {
         <div className="content__container ">
           <ul className="content__container__list ">
             <li className="content__container__list__item text-2xl md:text-5xl ">
-              <p className={`${styles.heroHeadText}`}>Web Developer</p>
+              <p
+                style={{
+                  fontFamily: "Belgan",
+                }}
+                className={`${styles.heroHeadText}`}
+              >
+                Web Developer
+              </p>
             </li>
             <li className="content__container__list__item text-2xl md:text-5xl">
-            <p className={`${styles.heroHeadText}`}>Harsh</p>
-
+              <p
+                style={{
+                  fontFamily: "Belgan",
+                }}
+                className={`${styles.heroHeadText}`}
+              >
+                Harsh
+              </p>
             </li>
             <li className="content__container__list__item text-2xl md:text-5xl">
-            <p className={`${styles.heroHeadText}`}>App Developer</p>
+              <p
+                style={{
+                  fontFamily: "Belgan",
+                }}
+                className={`${styles.heroHeadText}`}
+              >
+                App Developer
+              </p>
             </li>
             <li className="content__container__list__item text-2xl md:text-5xl">
-            <p className={`${styles.heroHeadText}`}>UI/UX Designer</p>
+              <p
+                style={{
+                  fontFamily: "Belgan",
+                }}
+                className={`${styles.heroHeadText}`}
+              >
+                UI/UX Designer
+              </p>
             </li>
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-    mode:"light"
+    mode:"light",
+    buffer:false,
 }
 const slice = createSlice({
     name:"slice",
@@ -8,8 +9,11 @@ const slice = createSlice({
     reducers:{
         changeMode:(state,{payload})=>{
             state.mode = payload
+        },
+        toggleBuffer:(state,{payload})=>{
+            state.buffer = payload
         }
     }
 })
-export const {changeMode}  = slice.actions;
+export const {changeMode,toggleBuffer}  = slice.actions;
 export default slice.reducer;

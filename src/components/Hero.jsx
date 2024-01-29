@@ -1,19 +1,55 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "../canvas";
 import SubHeroSection from "../components/SubHeroSection";
 import Resume from "./Resume";
-import { blackblob, blob1, blob2, blob3, grayblob, profile, sphere } from "../assets";
-
+import {
+  blackblob,
+  blob1,
+  blob2,
+  blob3,
+  grayblob,
+  profile,
+  sphere,
+} from "../assets";
+const slideInRightEffect = {
+  hidden: {
+    x: 500,
+  },
+  visible: {
+    x: 0,
+    transition: {
+      ease: "easeInOut",
+      type: "spring",
+    },
+  },
+};
+const slideInLeftEffect = {
+  hidden: {
+    x: -500,
+  },
+  visible: {
+    x: 0,
+    transition: {
+      ease: "easeInOut",
+      type: "spring",
+    },
+  },
+};
 const Hero = () => {
   return (
     <div className="flex w-full md:flex-row flex-col-reverse items-center">
-      <div className="relative md:ms-20 flex-1 p-2 md:p-8 ">
+      <motion.div  variants={slideInLeftEffect}
+        initial="hidden"
+        animate="visible"
+        transition="transition"  className="relative md:ms-20 flex-1 p-2 md:p-8 ">
         <div className="mx-auto flex flex-row items-start gap-5">
           <div>
             <div className="flex ">
-              <h1 className={`${styles.heroSubText} w-full`}>
+              <h1 className={`${styles.heroSubText} w-full`}  style={{
+          fontFamily: "Belgan",
+        }}>
                 {" "}
                 Hey there , I' m{" "}
               </h1>
@@ -21,7 +57,9 @@ const Hero = () => {
               <SubHeroSection />
             </div>
             <div className=" "></div>
-            <p className={`${styles.heroSubText} mt-20 md:mt-32 text-[20px] `}>
+            <p className={`${styles.heroSubText} mt-20 md:mt-32 text-[20px] `}  style={{
+          fontFamily: "Belgan",
+        }}>
               {" "}
               A full stack web and mobile application developer.
             </p>
@@ -35,12 +73,25 @@ const Hero = () => {
             <Resume />
           </div>
         </div>
-      </div>
-      <div className="profile relative flex-1  ">
-        <img src={profile} alt="profile" className="relative rounded-b-full z-50" />
-        <img src={blackblob} alt="" className="absolute top-14 right-[-20px] " />
-
-      </div>
+      </motion.div>
+      <motion.div
+        variants={slideInRightEffect}
+        initial="hidden"
+        animate="visible"
+        transition="transition"
+        className="profile relative flex-1  "
+      >
+        <img
+          src={profile}
+          alt="profile"
+          className="relative rounded-b-full z-50"
+        />
+        <img
+          src={grayblob}
+          alt=""
+          className="absolute top-14 right-[-20px] "
+        />
+      </motion.div>
     </div>
   );
 };

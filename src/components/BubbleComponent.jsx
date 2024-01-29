@@ -35,8 +35,9 @@ const BubbleComponent = () => {
 
   return (
     <div className='relative'>
-      <div className="absolute z-30"><Landing/></div>
-      <div className="gradient-bg fixed top-0 z-10">
+      <div className="relative">
+      </div>
+      <div className="gradient-bg absolute top-0 z-10">
         <svg xmlns="http://www.w3.org/2000/svg">
           <defs>
             <filter id="goo">

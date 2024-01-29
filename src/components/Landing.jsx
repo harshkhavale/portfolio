@@ -7,88 +7,61 @@ import { ThemeContext } from "@emotion/react";
 import ThemeControl from "./ThemeControl";
 import { contacts } from "../constants";
 import TextOutline from "./TextOutline";
-import { blob3 } from "../assets";
 import { Link, useNavigate } from "react-router-dom";
+import Logo from "./Logo";
 
 const Landing = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(true);
   const navigate = useNavigate();
-  const handleRoute=(route)=>{
+  const handleRoute = (route) => {
     navigate(route);
-
-  }
+  };
   return (
-    <div className="relative h-screen w-screen bg-sky-500 dark:bg-transparent overflow-hidden  flex">
-      <img
-        src={blob3}
-        alt="blob"
-        className="absolute -top-10 h-80 w-80 -start-20 z-50"
-      />
-       <p className="url fixed top-52 opacity-5 bg-transparent  right-[-200px] dark:opacity-10 font-black text-[10rem] -rotate-90 happy-font ">
-        /Home{" "}
-      </p>
-
-      <div className="name text-white text-center rounded-full p-8 z-50  absolute">
-        <p className=" text-7xl text-start my-[-20px] happy-font font-bold">
-          H
-        </p>
-        <div className="flex">
-          <p className=" text-7xl happy-font text-start my-[-15px]  ">A</p>
-          <p className=" text-7xl text-start happy-font my-[-20px] font-bold">
-            R
-          </p>
-        </div>
-        <div className="flex my-[-10px]">
-          <p className=" text-7xl text-start font-bold happy-font">S</p>
-          <p className=" text-7xl text-start font-black happy-font">H </p>
-          <p className=" text-7xl text-start font-bold happy-font">.</p>
-        </div>
-      </div>
-      <div className="robot w-screen h-full flex justify-center  items-center flex-1 z-0">
+    <div className="relative   h-screen w-screen bg-transparent overflow-hidden  flex">
+      <Logo />
+      <div className=" absolute background w-4/5 shadow-2xl h-4/5 m-16  ">
+      <div className="robot w-screen h-full flex justify-center   items-center flex-1 z-0">
         <RobotCanvas />
       </div>
+      </div>
+      
       <div className="mode absolute end-0  p-4  z-50 flex justify-center overflow-hidden items-center text-black py-4 rounded-[50px] ">
         <ThemeControl />
       </div>
-      <div className=" absolute bottom-0 right-0 p-4 ">
+      <div className=" absolute bottom-20 md:bottom-0 right-0 p-4 ">
         <ul className="list-none flex my-4 justify-end items-start flex-col gap-4">
           {contacts.map((link) => (
             <li
               key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              }  bg-white rounded-full p-4 text-black text-[18px] gap-2 font-medium cursor-pointer`}
-              onClick={() => {
-                setActive(link.title);
-              }}
+              className={`bg-white shadow-xl rounded-full p-4 text-black text-[18px] gap-2 font-medium cursor-pointer transition-transform transition-shadow transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
+              onClick={() => handleRoute(link.url)}
             >
               {link.icon}
             </li>
           ))}
         </ul>
       </div>
-      <div className="links p-8 z-50 cursor-pointer absolute bottom-0">
+      <div style={{ fontFamily: 'Belgan' }} className="fixed text-gray-100 flex items-center md:start-52  dark:bg-transparent  start-10 top-64  p-2 md:text-9xl text-5xl  font-black ">
+        Art through code
+      </div>
+      <div className="links md:p-8 p-4 z-50 cursor-pointer absolute bottom-5 md:bottom-0">
         <motion.h1
-          className="text-outline text-outline-hover font-black md:text-9xl text-7xl"
+          className="text-outline text-outline-hover font-black md:text-7xl text-7xl"
           data-text="WORK"
-          onClick={()=>handleRoute("/work")}
-
+          onClick={() => handleRoute("/work")}
         >
           WORK
         </motion.h1>
         <motion.h1
-          className="text-outline text-outline-hover font-black md:text-9xl text-7xl"
+          className="text-outline text-outline-hover font-black md:text-7xl text-7xl"
           data-text="ABOUT"
-          onClick={()=>handleRoute("/about")}
+          onClick={() => handleRoute("/about")}
         >
           ABOUT
         </motion.h1>
         <motion.h1
-          className="text-outline text-outline-hover font-black md:text-9xl text-7xl"
+          className="text-outline text-outline-hover font-black md:text-7xl text-7xl"
           data-text="CONTACT"
-          onClick={()=>handleRoute("/contact")}
-
+          onClick={() => handleRoute("/contact")}
         >
           CONTACT
         </motion.h1>

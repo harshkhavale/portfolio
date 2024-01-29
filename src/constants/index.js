@@ -2,32 +2,34 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import backendanimation from '../assets/animation/backend.json'
-import webanimation from '../assets/animation/web.json'
-import appanimation from '../assets/animation/appdevelopment.json'
-import uixanimation from '../assets/animation/uix.json'
+
+// #animations
+import backendanimation from "../assets/animation/backend.json";
+import webanimation from "../assets/animation/web.json";
+import appanimation from "../assets/animation/appdevelopment.json";
+import uixanimation from "../assets/animation/uix.json";
 import {
-  web,
-  backend,
-  mobile,
-  uix,
-  starbucks,
-  meta,
-  jobit,
-  tripguide,
-  tesla,
-  shopify,
-  carrent,
-  tathastu,
-  urbanstore,
+  variables,
+  variablesbanner,
+  variableslogo,
+  genesisbanner,
+  genesislogo,
+  spotifybanner,
+  socialbanner,
+  airbnbbanner,
+  javascriptCertificate,
+  problemSolvingCertificate,
+  dsacertificate,
+  javacertificate,
+  linuxcertificate,
+  angular,
 } from "../assets";
-import { variables, glory, almondtech,uber } from "../assets";
+
 import {
-  springboot,
+  
   css,
-  docker,
   figma,
-  git_hub,
+  github,
   html,
   javascript,
   mongodb,
@@ -48,10 +50,10 @@ import {
   postgre,
   postman,
   python,
-  native,
   php,
   next,
 } from "../assets";
+import { urbananalysis, urbancartmobile, urbandetail, urbandetailmobile, urbanmain, urbanmainmobile, urbanshowcase, urbansigninmobile, urbanstorebanner, urbanstorelogo } from "../assets/projects";
 export const navLinks = [
   {
     id: "about",
@@ -100,23 +102,19 @@ export const contacts = [
 export const services = [
   {
     title: "Web Developer",
-    icon: web,
-    animation:webanimation
+    animation: webanimation,
   },
   {
     title: "Mobile Developer",
-    icon: mobile,
-    animation:appanimation
+    animation: appanimation,
   },
   {
     title: "Backend Developer",
-    icon: backend,
-    animation:backendanimation
+    animation: backendanimation,
   },
   {
     title: "UI/UX Designer",
-    icon: uix,
-    animation:uixanimation
+    animation: uixanimation,
   },
 ];
 const frontend = [
@@ -163,8 +161,8 @@ const frameworks = [
     icon: express,
   },
   {
-    name: "Spring boot",
-    icon: springboot,
+    name: "Angular",
+    icon: angular,
   },
   {
     name: "ASP.NET",
@@ -178,7 +176,7 @@ const webtools = [
   },
   {
     name: "git /GitHub",
-    icon: git_hub,
+    icon: github,
   },
   {
     name: "postman",
@@ -243,302 +241,375 @@ const database = [
 
 export { frontend, database, frameworks, backendtech, webtools, mobiletech };
 
-const experiences = [
+export const certificates = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+    title: "Javascript",
+    link: "https://www.hackerrank.com/certificates/c3536b132243",
+    img: javascriptCertificate,
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+    title: "Linux ",
+    link: "",
+    img: linuxcertificate,
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+    title: "Problem Solving",
+    link: "https://www.hackerrank.com/certificates/0644fd90b3c2",
+    img: problemSolvingCertificate,
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-export const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    title: "DSA",
+    link: "",
+    img: dsacertificate,
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "Java",
+    link: "",
+    img: javacertificate,
   },
 ];
 
 export const projects = [
   {
-    name: "variables.com",
-    subtitle: "E-commerce digital electonics store ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
+    title: "VARIABLES",
+    bannerImg: variablesbanner,
+    tagline: "let's get up to date",
+    technologies: [
+      "ASP.NET",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstarp",
+      "RazorPay",
+    ],
+    theme: "#ECF0F1",
+    theme2: "#41566e",
+    theme2: "#232426",
+    color: "#17202A",
+    logo: variableslogo,
+    startDate: "Nov/2022",
+    endDate: "Jan/2023",
+    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
+    deploy: null,
+    headerText: "variables is an Digital electronics gadget ecommerse website.",
+    slider: [
       {
-        name: "ASP.NET",
-        color: "blue-text-gradient",
+        name: "Home",
+        image: variables,
       },
       {
-        name: "MYSQL",
-        color: "green-text-gradient",
+        name: "Home",
+        image: variables,
       },
       {
-        name: "RazorPay",
-        color: "pink-text-gradient",
+        name: "Home",
+        image: variables,
       },
     ],
-    image: variables,
-    source_code_link:
-      "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    live_demo: "",
+    pages: [
+      {
+        title: "Home",
+        image: variables,
+        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
+      },
+    ],
+    mobile: [
+      {
+        image: variables,
+      },
+    ],
+    next: {
+      title: "URBANSTORE",
+      to: "/urbanstore",
+    },
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
+    title: "URBAN_STORE",
+    bannerImg: urbanstorebanner,
+    tagline: "let's get up to date",
+    technologies: [
+      "ASP.NET",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstarp",
+      "RazorPay",
+    ],
+    theme: "#E74C3C",
+    theme2: "#41566e",
+    theme2: "#232426",
+    color: "#FDFEFE",
+    logo: urbanstorelogo,
+    startDate: "Nov/2022",
+    endDate: "Jan/2023",
+    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
+    deploy: "https://urban-store-in-apk.vercel.app/",
+    headerText: "variables is an Digital electronics gadget ecommerse website.",
+    slider: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "Home",
+        image: urbandetail,
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: "Home",
+        image: urbanshowcase,
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "Home",
+        image: urbananalysis,
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    pages: [
+      {
+        title: "Home",
+        image: urbanmain,
+        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
+      },
+    ],
+    mobile: [
+      {
+        image: urbanmainmobile,
+      },
+      {
+        image: urbancartmobile,
+      },
+      {
+        image:urbandetailmobile,
+      },
+    ],
+    next: {
+      title: "URBANSTORE",
+      to: "/urbanstore",
+    },
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
+    title: "GENESIS",
+    bannerImg: genesisbanner,
+    tagline: "let's get up to date",
+    technologies: [
+      "ASP.NET",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstarp",
+      "RazorPay",
+    ],
+    theme: "#17202A",
+    theme2: "#41566e",
+    theme2: "#232426",
+    color: "#FDFEFE",
+    logo: genesislogo,
+    startDate: "Nov/2022",
+    endDate: "Jan/2023",
+    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
+    deploy: null,
+    headerText: "variables is an Digital electronics gadget ecommerse website.",
+    slider: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "Home",
+        image: variables,
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "Home",
+        image: variables,
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "Home",
+        image: variables,
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
-
-  {
-    name: "glory",
-    subtitle: "online makeup store design ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
+    pages: [
       {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "pink-text-gradient",
+        title: "Home",
+        image: variables,
+        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
       },
     ],
-    image: glory,
-    source_code_link:
-      "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    live_demo: "",
-  },
-  {
-    name: "almond-tech",
-    subtitle: "replication of almond-tech Technology website ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
+    mobile: [
       {
-        name: "React",
-        color: "blue-text-gradient",
+        image: urbanstorelogo,
       },
       {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "pink-text-gradient",
+        image: urbanstorelogo,
       },
     ],
-    image: almondtech,
-    source_code_link:
-      "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    live_demo: "",
-  },
-
-
-  {
-    name: "variables.com",
-    subtitle: "E-commerce digital electonics store ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "ASP.NET",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "MYSQL",
-        color: "green-text-gradient",
-      },
-      {
-        name: "RazorPay",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: variables,
-    source_code_link:
-      "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    live_demo: "",
+    next: {
+      title: "URBANSTORE",
+      to: "/urbanstore",
+    },
   },
   {
-    name: "urban_store.in",
-    subtitle: "E-commerce digital electonics store ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MongoDB",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MUI",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Stripe",
-        color: "pink-text-gradient",
-      },
-      
+    title: "SPOTIFY",
+    bannerImg: spotifybanner,
+    tagline: "let's get up to date",
+    technologies: [
+      "ASP.NET",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstarp",
+      "RazorPay",
     ],
-    image: urbanstore,
-    source_code_link:
-      "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    live_demo: "",
+    theme: "#0B5345",
+    theme2: "#00ff1a",
+    theme2: "#232426",
+    color: "#FDFEFE",
+    logo: urbanstorelogo,
+    startDate: "Nov/2022",
+    endDate: "Jan/2023",
+    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
+    deploy: null,
+    headerText: "variables is an Digital electronics gadget ecommerse website.",
+    slider: [
+      {
+        name: "Home",
+        image: variables,
+      },
+      {
+        name: "Home",
+        image: variables,
+      },
+      {
+        name: "Home",
+        image: variables,
+      },
+    ],
+    pages: [
+      {
+        title: "Home",
+        image: variables,
+        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
+      },
+    ],
+    mobile: [
+      {
+        image: urbanstorelogo,
+      },
+      {
+        image: urbanstorelogo,
+      },
+    ],
+    next: {
+      title: "URBANSTORE",
+      to: "/urbanstore",
+    },
   },
-
-
   {
-    name: "UBER.com",
-    subtitle: "E-commerce digital electonics store ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "Figma",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "canva",
-        color: "green-text-gradient",
-      },
-     
+    title: "SOCIAL",
+    bannerImg: socialbanner,
+    tagline: "let's get up to date",
+    technologies: [
+      "ASP.NET",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstarp",
+      "RazorPay",
     ],
-    image: uber,
-    
+    theme: "#D6EAF8",
+    theme2: "#41566e",
+    theme2: "#232426",
+    color: "black",
+    logo: urbanstorelogo,
+    startDate: "Nov/2022",
+    endDate: "Jan/2023",
+    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
+    deploy: null,
+    headerText: "variables is an Digital electronics gadget ecommerse website.",
+    slider: [
+      {
+        name: "Home",
+        image: variables,
+      },
+      {
+        name: "Home",
+        image: variables,
+      },
+      {
+        name: "Home",
+        image: variables,
+      },
+    ],
+    pages: [
+      {
+        title: "Home",
+        image: variables,
+        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
+      },
+    ],
+    mobile: [
+      {
+        image: urbanstorelogo,
+      },
+      {
+        image: urbanstorelogo,
+      },
+    ],
+    next: {
+      title: "URBANSTORE",
+      to: "/urbanstore",
+    },
   },
   {
-    name: "तथास्तु.com",
-    subtitle: "E-commerce digital electonics store ",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "Figma",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "canva",
-        color: "green-text-gradient",
-      },
-     
+    title: "airbnb",
+    bannerImg: airbnbbanner,
+    tagline: "let's get up to date",
+    technologies: [
+      "ASP.NET",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstarp",
+      "RazorPay",
     ],
-    image: tathastu,
-    
+    theme: "#F8BBD0",
+    theme2: "#41566e",
+    theme2: "#232426",
+    color: "black",
+    logo: urbanstorelogo,
+    startDate: "Nov/2022",
+    endDate: "Jan/2023",
+    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
+    deploy: null,
+    headerText: "variables is an Digital electronics gadget ecommerse website.",
+    slider: [
+      {
+        name: "Home",
+        image: variables,
+      },
+      {
+        name: "Home",
+        image: variables,
+      },
+      {
+        name: "Home",
+        image: variables,
+      },
+    ],
+    pages: [
+      {
+        title: "Home",
+        image: variables,
+        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
+      },
+    ],
+    mobile: [
+      {
+        image: urbanstorelogo,
+      },
+      {
+        image: urbanstorelogo,
+      },
+    ],
+    next: {
+      title: "URBANSTORE",
+      to: "/urbanstore",
+    },
   },
-  
-] 
+];

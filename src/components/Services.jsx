@@ -91,8 +91,10 @@ const Services = () => {
   return (
     <div className="relative mt-10 md:mt-0">
       <motion.div variants={textVariant()} className="">
-        <p className={styles.sectionSubText}>Introduction</p>
-        <TextOutline text={"EXPERTISE"} />
+        <p className={`${styles.sectionSubText} happy-font`}  >Introduction</p>
+       <p className="text-9xl font-black" style={{
+          fontFamily: "Belgan",
+        }}>Expertises</p>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 0.1)}
