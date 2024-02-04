@@ -66,13 +66,15 @@ import linuxcertificate from "./certificates/linuxcertificate.png";
 // #logo
 import logo from './logo.png'
 import roboz from './roboz.jpg'
-import coder from './coder.jpeg'
+import coder from './coder.png'
+import google from './certificates/google.png';
 export {
   javascriptCertificate,
   problemSolvingCertificate,
   javacertificate,
   linuxcertificate,
   dsacertificate,
+  google,
 };
 export { variables,logo,robox};
 export {

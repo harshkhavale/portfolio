@@ -22,7 +22,7 @@ import {
   linuxcertificate,
   angular,
 } from "../assets";
-
+import XIcon from '@mui/icons-material/X';
 import {
   
   css,
@@ -52,6 +52,7 @@ import {
   next,
 } from "../assets";
 import { socialanime, spotifyanime, spotifydashboard, spotifydashboardmobile, spotifylogo, spotifymain, spotifymainmobile, urbananalysis, urbancartmobile, urbandetail, urbandetailmobile, urbanmain, urbanmainmobile, urbanshowcase, urbansigninmobile, urbanstorebanner, urbanstorelogo } from "../assets/projects";
+import { X } from "@mui/icons-material";
 export const navLinks = [
   {
     id: "about",
@@ -74,33 +75,34 @@ export const navLinks = [
 export const contacts = [
   {
     id: "linkdin",
-    title: "linkdin",
-    url: "linkdin/harshkhavale",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/harshkhavale11/",
     icon: <LinkedInIcon />,
   },
   {
-    id: "linkdin",
-    title: "linkdin",
-    url: "linkdin/harshkhavale",
+    id: "github",
+    title: "GitHub",
+    url: "https://github.com/harshkhavale",
     icon: <GitHubIcon />,
   },
   {
-    id: "linkdin",
-    title: "linkdin",
-    url: "linkdin/harshkhavale",
+    id: "email",
+    title: "Gmail",
+    url: "harshkhavale1102@gmailcom",
     icon: <EmailIcon />,
   },
   {
-    id: "linkdin",
-    title: "linkdin",
-    url: "linkdin/harshkhavale",
-    icon: <TwitterIcon />,
+    id: "X",
+    title: "X",
+    url: "https://twitter.com/HarshKhavale",
+    icon: <XIcon/>,
   },
 ];
 export const services = [
   {
     title: "Web Developer",
     animation: webanimation,
+    text: "Web Developer",
   },
   {
     title: "Mobile Developer",

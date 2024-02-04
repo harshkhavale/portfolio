@@ -5,22 +5,42 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Close, DragHandleOutlined } from "@mui/icons-material";
 import ThemeControl from "./ThemeControl";
+import { useMediaQuery } from "@mui/material";
+
 const Navbar = () => {
   const dispatch = useDispatch();
+  const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
   return (
-    <div className="z-50  navbar flex justify-center pt-2">
+    <div
+      className={`z-50  navbar flex justify-center pt-2 ${
+        !isNonMobileScreens ? "" : ""
+      } `}
+    >
       <div className="navbar w-full px-4 flex gap-2 justify-between items-center">
-        <div className="logo flex gap-4 items-center ">
+        <div
+          className={`logo flex gap-4 dark:text-white text-black items-center ${
+            !isNonMobileScreens ? "" : ""
+          } `}
+        >
           <img src={logo} alt="" className="w-14 h-14 " />
-          <div className="line  rotate-180 bg-white p-1 h-16"></div>
+          <div className="line  rotate-180 bg-current p-1 h-16"></div>
           <div>
-          <p className="text-wrap text-[1.7rem] font-bold -my-2" style={{fontFamily:'Belgan'}}>HARSH</p>
-          <p className="text-wrap font-bold text-[1.3rem] -my-2 " style={{fontFamily:'Belgan'}}>KHAVALE</p>
+            <p
+              className="text-wrap text-[1.7rem] font-bold -my-2"
+              style={{ fontFamily: "Belgan" }}
+            >
+              HARSH
+            </p>
+            <p
+              className="text-wrap font-bold text-[1.3rem] -my-2 "
+              style={{ fontFamily: "Belgan" }}
+            >
+              KHAVALE
+            </p>
           </div>
-         
-
         </div>
         <div className="links">
           <ul className="list-none hidden sm:flex flex-row items-center gap-10 rounded-2xl border-2 border-current p-2">
@@ -47,12 +67,16 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
+       
+
         <div
-          className="sm:hidden cursor-pointer flex flex-1 justify-end items-center"
+          className="sm:hidden cursor-pointer flex flex-1 justify-end dark:text-white text-black items-center"
           onClick={() => setToggle(!toggle)}
         >
           {toggle ? <DragHandleOutlined /> : <Close />}
         </div>
+       {!isNonMobileScreens && ( <div ><ThemeControl /></div>)}
         <div
           className={`${
             toggle ? "hidden" : "flex-col"

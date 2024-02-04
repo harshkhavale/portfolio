@@ -5,7 +5,7 @@ const StackedCards = () => {
  
   return (
     <div className="wrapper w-screen ">
-      <div className="container flex md:flex-row flex-col gap-4">
+      <div className="container flex flex-col  gap-4">
         <input type="radio" name="slide" id="c1" defaultChecked />
         <label htmlFor="c1" className="stackcard">
           <div className="row">
@@ -36,16 +36,7 @@ const StackedCards = () => {
             </div>
           </div>
         </label>
-        <input type="radio" name="slide" id="c4" />
-        <label htmlFor="c4" className="stackcard">
-          <div className="row">
-            <div className="icon">4</div>
-            <div className="description">
-              <h4>New technologies</h4>
-              <p>Space engineering becomes more and more advanced</p>
-            </div>
-          </div>
-        </label>
+       
       </div>
     </div>
   );

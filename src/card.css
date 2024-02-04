@@ -78,8 +78,8 @@ input {
 }
 
 input:checked + label {
-  width: 600px;
-  height: 400px;
+  width: 24rem;
+  height: 32rem;
   transition: ease-in-out 1s;
 }
 
@@ -96,7 +96,4 @@ input:checked + label .description {
 }
 .stackcard[for="c3"] {
   background-image: url('./assets/certificates/JavascriptCertificate.png');
-}
-.stackcard[for="c4"] {
-  background-image: url('./assets/certificates/javacertificate.png');
 }

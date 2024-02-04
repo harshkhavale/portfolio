@@ -4,7 +4,7 @@ const Certifications = () => {
   return (
     <div className='certificates'>
        
-      <div className="marquee-container">
+      <div className="marquee-container mt-28 md:mt-10">
           <p
             className="marquee-text text-[15rem] md:text-[20rem] "
             style={{

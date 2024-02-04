@@ -81,14 +81,14 @@ const Creative = () => {
           inspired by the
         </p>
         <p
-          className="abstract -mb-10 text-center text-[4rem] md:text-[12rem] ms-72 md:-my-20"
+          className="abstract -mb-10 text-center text-[4rem] md:text-[12rem] ms-24 md:ms-72 md:-my-20"
           style={{
             fontFamily: "Belgan",
           }}
         >
           ABSTRACTION
         </p>
-        <div className="last my-6 md:-my-20 flex flex-col -ms-72">
+        <div className="last my-6 md:-my-20 flex flex-col -ms-96 md:-ms-72">
           <p
             className="text-[2rem] md:text-[3rem] text-center"
             style={{

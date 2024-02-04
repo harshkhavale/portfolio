@@ -11,7 +11,7 @@ import { blob1 } from "../assets";
 const ServiceCard = ({ title, index, icon, animation, description }) => {
   return (
     <div className="xs:w-[250px] dark:bg-zinc-700 dark:text-white bg-white md:w-5/12 shadow-xl rounded-2xl">
-      <motion.div
+      <div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full  p-[1px] rounded-[20px] shadow-card"
       >
@@ -82,7 +82,7 @@ const ServiceCard = ({ title, index, icon, animation, description }) => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
@@ -90,13 +90,13 @@ const ServiceCard = ({ title, index, icon, animation, description }) => {
 const Services = () => {
   return (
     <div className="relative mt-10 md:mt-0">
-      <motion.div variants={textVariant()} className="">
+      <div variants={textVariant()} className="">
         <p className={`${styles.sectionSubText} happy-font`}  >Introduction</p>
        <p className="text-9xl font-black" style={{
           fontFamily: "Belgan",
         }}>Expertises</p>
-      </motion.div>
-      <motion.p
+      </div>
+      <p
         variants={fadeIn("", "", 0.1, 0.1)}
         className=" text-secondary text-[17px] my-4 max-w-3xl leading-[30px]"
       >
@@ -104,7 +104,7 @@ const Services = () => {
         eius dignissimos! Velit quaerat inventore suscipit voluptatum tempore
         voluptate unde culpa corporis assumenda voluptatibus tenetur quasi
         impedit atque sed soluta, dolores consectetur deleniti
-      </motion.p>
+      </p>
       <div className="mt-20 w-full flex flex-wrap justify-center gap-8">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

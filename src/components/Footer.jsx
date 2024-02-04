@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='relative flex justify-center gap-4 items-center p-2'>
          <div>
-            <p className='font-bold text-xl happy-font'>harshkhavale@2024</p>
+            <p className='font-bold md:text-xl text-sm happy-font'>harshkhavale@2024</p>
           </div>
           <div className='bg-white h-10 p-1'></div>
        <div className="contact p-2 ">
