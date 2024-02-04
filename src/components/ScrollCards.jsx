@@ -15,7 +15,7 @@ const VerticalScrollCarousel = () => {
   return (
     <section
       ref={targetRef}
-      className=" bg-white dark:bg-[#191919]  relative h-[200vh] bg-transparent"
+      className=" bg-white dark:bg-[#191919]  relative  bg-transparent"
     >
       <div className="sticky top-0  flex  h-[150vh] items-center overflow-hidden">
         <div className="certificates absolute top-0 -z-30">
@@ -47,7 +47,7 @@ const VerticalScrollCarousel = () => {
           </motion.div>
           <motion.div
             style={{ y }}
-            className=" flex p-8 flex-col md:mt-[100vh] gap-4"
+            className="  flex p-8 flex-col md:mt-[100vh] gap-4"
           >
             {certificates.map((certificate, index) => (
               <div
@@ -74,7 +74,7 @@ const ScrollCards = () => {
   return (
     <div className=" ">
       {!isNonMobileScreens && (
-        <div className="flex h-48 items-center justify-center  font-semibold text-2xl px-16 w-[40rem]">
+        <div className="flex items-center justify-center  font-semibold text-2xl px-16 w-[40rem]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           illum ea ducimus deleniti maxime optio.
         </div>

@@ -8,28 +8,32 @@ import {
   GitHub,
 } from "@mui/icons-material";
 
-
 import { projects } from "../constants";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { motion } from "framer-motion";
 import MobileLayout from "../components/MobileLayout";
 import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
+import { useLocation } from "react-router-dom";
+import ThemeControl from "../components/ThemeControl";
 const ProjectPage = () => {
-  const { index } = useParams();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
 
-  // Convert the index to a number
-  const projectIndex = parseInt(index, 1);
-  const project = projects[1];
+  // Get the value of the 'productId' query parameter
+  const Id = queryParams.get("projectId");
+  const project = projects[Id];
 
   const [activeSlide, setActiveSlide] = useState(0);
   const handleNext = () => {
     setActiveSlide((prev) => (prev + 1) % project.slider.length);
   };
   const handlePrev = () => {
-    setActiveSlide((prev) => (prev - 1 + project.slider.length) % project.slider.length);
+    setActiveSlide(
+      (prev) => (prev - 1 + project.slider.length) % project.slider.length
+    );
   };
-   const getSlideClasses = (index) => {
+  const getSlideClasses = (index) => {
     return index === activeSlide ? "" : "hidden";
   };
   const navigate = useNavigate();
@@ -40,31 +44,50 @@ const ProjectPage = () => {
     <div
       key={project.title}
       className={`aboutpage pb-48 relative overflow-y-hidden `}
-      // style={{ backgroundColor: project.theme, color: project.color }}
+      style={{ backgroundColor: project.theme, color: project.color }}
     >
-      <p className=" font- flex gap-4 p-8">
-        Home <p>{"/"}</p> Work <p>{"/"}</p>{" "}
-        <p className="font-bold"             style={{ fontFamily: "Belgan" }}
->{project.title}</p>
-      </p>
-     
-      <div className="arrow fixed  top-0 right-0 p-4" onClick={goBack}>
-        <ArrowBack
-          style={{
-            fontSize: "3rem",
-          }}
-          className=" cursor-pointer border-2 hover:border-3 md:p-1 p-2 rounded-full"
-        />
+       <div className="flex justify-end pt-2">
+        <div className="navbar flex justify-center gap-6  rounded-3xl w-min  px-4 items-center">
+          <p className=" happy-font font-semibold flex gap-4 ">
+            Home <p>{">"}</p> about
+          </p>
+          
+          <div className=" flex gap-4 top-4 z-50 right-4 rounded-3xl p-1">
+            <div
+              className="arrow cursor-pointer border-2 hover:border-3  overflow-hidden  rounded-full"
+              onClick={goBack}
+            >
+              <motion.div
+                whileHover={{
+                  x: [0, -50, 50, 0],
+                  transition: {
+                    yoyo: 1,
+                  },
+                }}
+              >
+                <ArrowBack
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                  className="p-1"
+                />
+              </motion.div>
+            </div>
+            <div className="theme">
+              <ThemeControl />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="relative w-full mt-0 ">
         <div className="banner relative text-white  overflow-hidden ">
           <div className="next relative  top-0 right-0 z-50">
-            <div className=" absolute right-0 md:top-40 top-24 z-50">
+            <div className=" absolute right-0 md:top-20 top-24 z-50">
               <motion.h1
-                className=" name font-black md:text-9xl text-7xl"
-                data-text="variables"             style={{ fontFamily: "Belgan" }}
-
+                className="font-black md:text-[15rem] text-7xl"
+                data-text="variables"
+                style={{ fontFamily: "Belgan" }}
               >
                 {project.title}
               </motion.h1>
@@ -84,7 +107,7 @@ const ProjectPage = () => {
 
         <div className="section1 md:mx-10 flex flex-col md:flex-row gap-4 p-4 md:p-16">
           <div className="left  gap-4 grid md:grid-cols-5  md:grid-rows-3">
-            <div className=" row-span-1 col-span-3 font-semibold  md:text-5xl" >
+            <div className=" row-span-1 col-span-3 font-semibold  md:text-5xl">
               {project.headerText}{" "}
             </div>
             <div className=" row-span-1 col-span-2 flex gap-4 flex-col ">
@@ -197,14 +220,14 @@ const ProjectPage = () => {
         <div className="mobile md:mx-10 md:grid grid-cols-4 md:p-16 p-4 ">
           <div className="screens col-span-3 flex flex-wrap items-center justify-center gap-4 md:gap-12">
             <div className="flex gap-6 flex-wrap">
-              {
-                project.mobile.map((page,index)=>(
-                  <MobileLayout key={page.image} title={project.title} image={page.image} />
-
-                ))
-              }
+              {project.mobile.map((page, index) => (
+                <MobileLayout
+                  key={page.image}
+                  title={project.title}
+                  image={page.image}
+                />
+              ))}
             </div>
-           
           </div>
           <div className="col-span-1 md:p-12">
             <p className="font-bold">A fully featured mobile experience.</p>

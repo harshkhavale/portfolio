@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import "../card.css";
-import { variables, variablesbanner } from "../assets";
-import { projects } from "../constants";
+
 const StackedCards = () => {
  
   return (
-    <div className="wrapper">
+    <div className="wrapper w-screen ">
       <div className="container flex md:flex-row flex-col gap-4">
         <input type="radio" name="slide" id="c1" defaultChecked />
-        <label htmlFor="c1" className="card">
+        <label htmlFor="c1" className="stackcard">
           <div className="row">
             <div className="icon">1</div>
             <div className="description">
@@ -18,7 +17,7 @@ const StackedCards = () => {
           </div>
         </label>
         <input type="radio" name="slide" id="c2" />
-        <label htmlFor="c2" className="card">
+        <label htmlFor="c2" className="stackcard">
           <div className="row">
             <div className="icon">2</div>
             <div className="description">
@@ -28,7 +27,7 @@ const StackedCards = () => {
           </div>
         </label>
         <input type="radio" name="slide" id="c3" />
-        <label htmlFor="c3" className="card">
+        <label htmlFor="c3" className="stackcard">
           <div className="row">
             <div className="icon">3</div>
             <div className="description">
@@ -38,7 +37,7 @@ const StackedCards = () => {
           </div>
         </label>
         <input type="radio" name="slide" id="c4" />
-        <label htmlFor="c4" className="card">
+        <label htmlFor="c4" className="stackcard">
           <div className="row">
             <div className="icon">4</div>
             <div className="description">

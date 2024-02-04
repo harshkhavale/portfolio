@@ -1,9 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 body {
   background-color: #eeeeea;
@@ -24,8 +19,9 @@ body {
   justify-content: start;
 }
 
-.card {
+.stackcard {
   width: 80px;
+  height: 50%;
   border-radius: .75rem;
   background-size: cover;
   cursor: pointer;
@@ -38,13 +34,13 @@ body {
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
 }
 
-.card > .row {
+.stackcard > .row {
   color: white;
   display: flex;
   flex-wrap: nowrap;
 }
 
-.card > .row > .icon {
+.stackcard > .row > .icon {
   background: #223;
   color: white;
   border-radius: 50%;
@@ -55,7 +51,7 @@ body {
   margin: 15px;
 }
 
-.card > .row > .description {
+.stackcard > .row > .description {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -92,15 +88,15 @@ input:checked + label .description {
   transform: translateY(0) !important;
 }
 
-.card[for="c1"] {
-  background-image: url('./assets/boycycle.jpg');
+.stackcard[for="c1"] {
+  background-image: url('./assets/certificates/google.png');
 }
-.card[for="c2"] {
-  background-image: url('./assets/boycycle.jpg');
+.stackcard[for="c2"] {
+  background-image: url('./assets/certificates/ProblemSolvingCertificate.png');
 }
-.card[for="c3"] {
-  background-image: url('./assets/boycycle.jpg');
+.stackcard[for="c3"] {
+  background-image: url('./assets/certificates/JavascriptCertificate.png');
 }
-.card[for="c4"] {
-  background-image: url('./assets/boycycle.jpg');
+.stackcard[for="c4"] {
+  background-image: url('./assets/certificates/javacertificate.png');
 }

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lincoln Continental Mark V
+* source:	https://sketchfab.com/3d-models/lincoln-continental-mark-v-09587fee473d4b07ac7f10d2a65b47c4
+* author:	Barbo (https://sketchfab.com/barbo-autos)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lincoln Continental Mark V" (https://sketchfab.com/3d-models/lincoln-continental-mark-v-09587fee473d4b07ac7f10d2a65b47c4) by Barbo (https://sketchfab.com/barbo-autos) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

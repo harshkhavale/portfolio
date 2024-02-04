@@ -35,38 +35,27 @@ import menusvg from "./animation/menu.svg";
 import activitysvg from "./animation/activity.svg";
 import compliancesvg from "./animation/compliance.svg";
 import cursorsvg from "./animation/cursor.svg";
-import dashboardsvg from "./animation/dashboard.svg";
 // #profile
 import profile from "./profile/profilepic.png";
 // #other
-import code from "./code.jpg";
-import blob1 from "./animation/blob.svg";
-import blob2 from "./animation/blob2.svg";
-import blob3 from "./animation/blob3.svg";
+
 import blackblob from "./animation/blackblob.svg";
 import grayblob from "./animation/grayblob.svg";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import experiment1 from "./experiment1.jpg";
-import experiment2 from "./experiment2.jpg";
-import room from "./room.jpg";
-import experiment3 from "./experiment3.jpg";
-import boy from "./Smirk.jpg";
-import pattern from "./pattern.jpg";
 
-import boycycle from "./boycycle.jpg";
+import pattern from "./pattern.jpg";
+import robox from './robox.jpg'
 
 // #project
 import variables from "./projects/variables/variables.png";
 // #banner
 import variablesbanner from "./projects/variables/variablesbanner.jpg";
-import genesisbanner from "./projects/genesis/genesisbanner.jpg";
 import spotifybanner from "./projects/spotify/spotifybanner.jpg";
 import socialbanner from "./projects/social/socialbanner.jpg";
 import airbnbbanner from "./projects/airbnb/airbnbbanner.jpg";
 // #logos
 import variableslogo from "./projects/variables/variableslogo.png";
-import genesislogo from "./projects/genesis/genesislogo.png";
 
 // #certificates
 import javascriptCertificate from "./certificates/JavascriptCertificate.png";
@@ -74,6 +63,10 @@ import problemSolvingCertificate from "./certificates/ProblemSolvingCertificate.
 import javacertificate from "./certificates/javacertificate.png";
 import dsacertificate from "./certificates/dsacertificate.png";
 import linuxcertificate from "./certificates/linuxcertificate.png";
+// #logo
+import logo from './logo.png'
+import roboz from './roboz.jpg'
+import coder from './coder.jpeg'
 export {
   javascriptCertificate,
   problemSolvingCertificate,
@@ -81,34 +74,26 @@ export {
   linuxcertificate,
   dsacertificate,
 };
-export { variables};
+export { variables,logo,robox};
 export {
   variablesbanner,
-  genesisbanner,
   spotifybanner,
   socialbanner,
   airbnbbanner,
 };
-export { variableslogo,genesislogo };
-export { resume };
+export { variableslogo};
 export {
   menu,
   close,
   profile,
-  blob1,
-  blob2,
-  blob3,
   blackblob,
   grayblob,
-  experiment1,
-  experiment2,
-  experiment3,
-  room,
-  boy,
+ 
   pattern,
-  boycycle,
+  roboz,
+  coder,resume
 };
-export { menusvg, dashboardsvg, compliancesvg, cursorsvg, activitysvg, code };
+export { menusvg, compliancesvg, cursorsvg, activitysvg };
 export {
   angular,
   github,

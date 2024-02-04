@@ -3,13 +3,13 @@ import { motion, useAnimation } from "framer-motion";
 import {
   CircleNotifications,
   FireExtinguisher,
-  Leaderboard,
-  StarsTwoTone,
+ 
 } from "@mui/icons-material";
-import { boycycle, pattern, room } from "../assets";
-import { Sky, Sparkles } from "@react-three/drei";
+import {logo, pattern, room } from "../assets";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ThemeControl from "./ThemeControl";
+import TimeClock from "../widgets/TimeClock";
 gsap.registerPlugin(ScrollTrigger);
 
 const IDELayout = () => {
@@ -32,30 +32,30 @@ const IDELayout = () => {
   
 
   return (
-    <div className="idelayout bg-zinc-900 h-[600rem] relative text-xs text-gray-300">
+    <div className="idelayout  h-[600rem] relative text-xs  ">
       <div className="ide sticky top-0 h-[40rem]">
         <motion.div
           // animate={{ rotateX: 30, rotateY: 10, rotateZ: -10 }}
-          className="asch absolute right-20 top-40 bg-zinc-800 rounded-2xl p-4 h-[30rem] w-[40rem] "
+          className="asch absolute right-20 top-40 dark:bg-zinc-800 dark:text-white bg-white  rounded-2xl p-4 h-[30rem] w-[40rem] "
         >
           <motion.div className="dots ">
             <motion.div className="flex gap-2">
-              <div className="bg-zinc-700 rounded-full p-2" />
-              <div className="bg-zinc-700 rounded-full p-2" />
-              <div className="bg-zinc-700 rounded-full p-2" />
+              <div className="bg-blue-400 rounded-full p-2" />
+              <div className="bg-red-400 rounded-full p-2" />
+              <div className="bg-green-400 rounded-full p-2" />
             </motion.div>
           </motion.div>
-          <div className="features w-82   absolute top-36  p-4 rounded-lg">
+          <div className="features w-82   absolute bottom-0 rounded-lg">
             <div className=" flex relative flex-col h-full w-full">
-              <div className="content  p-4 rounded-3xl">
-                <div className=" nav flex items-center gap-8 text-xs font-bold ">
-                  <p className="bg-zinc-700 px-2 pt-2 rounded-t-2xl">
+              <div className="content rounded-3xl ">
+                <div className=" nav flex items-center gap-8 text-xs font-bold  ">
+                  <p className="dark:bg-zinc-700 bg-white px-2 pt-2 rounded-t-2xl">
                     Features
                   </p>
                   <p>Messages</p>
                   <p>Links</p>
                 </div>
-                <ul className="bg-zinc-700 p-4 flex flex-col gap-4 rounded-b-3xl w-full">
+                <ul className="dark:bg-zinc-700 bg-white p-4 flex flex-col gap-4 rounded-b-3xl w-full shadow-2xl">
                   <li className=" flex justify-between">
                     <p className="text-sm">Faster Development</p>{" "}
                     <div className="toggle  border-2 border-green-500 relative rounded-full p-3 w-10 flex items-center">
@@ -78,7 +78,7 @@ const IDELayout = () => {
               </div>
             </div>
           </div>
-          <div className="system w-96 h-60 absolute top-4 left-40  bg-zinc-700 rounded-xl m-4">
+          <div className="system w-96 h-60 absolute top-4 left-40  drk:bg-zinc-700 rounded-xl m-4">
             <div className="flex gap-4 p-8">
               <h1 className="happy-font">Design</h1>
               <FireExtinguisher />
@@ -195,33 +195,15 @@ const IDELayout = () => {
             <div className="color p-4 bg-orange-500" />
           </div>
           <div className="image absolute top-52 -right-10 w-52 h-60 border-4 shadow-3xl border-gray-500 rounded-2xl overflow-hidden">
-            <img src={boycycle} alt="" className="w-full h-full object-cover" />
+            <img src={pattern} alt="" className="w-full h-full object-cover" />
           </div>
-          <div className="aim flex absolute start-0 bottom-0 gap-2 flex-col p-4">
-            <div className="learn  flex gap-4  bg-zinc-900  p-2 rounded-2xl">
-              <Leaderboard />
-              <div>
-                <p className="font-semibold">Learn</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div className="learn  flex gap-4  bg-zinc-900  p-2 rounded-2xl">
-              <StarsTwoTone />
-              <div>
-                <p>Learn</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>{" "}
-            <div className="learn  flex gap-4   bg-zinc-900  p-2 rounded-2xl">
-              <Leaderboard />
-              <div>
-                <p>Learn</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
+        <img src={logo} alt="" className="w-20 h-20 absolute top-10  z-50 bg-white shadow-2xl rounded-2xl"/>
         </motion.div>
         <div className="asch"></div>
+      </div>
+      <div className="absolute top-0 z-50">
+      <ThemeControl/>
+<TimeClock/>
       </div>
     </div>
   );

@@ -1,16 +1,12 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
-import TextOutline from "../components/TextOutline";
 import { ArrowBack } from "@mui/icons-material";
 import ThemeControl from "../components/ThemeControl";
-import Steps from "../components/Steps";
-import Robot from "../canvas/Robot";
+
 import { useNavigate } from "react-router-dom";
-import { animate, motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+import {motion } from "framer-motion";
 import TechSection from "../components/TechSection";
-import Languages from "../components/Languages";
 const About = () => {
   const navigate = useNavigate();
   const goBack = () => {
@@ -18,18 +14,51 @@ const About = () => {
   };
 
   return (
-    <div className="aboutpage relative overflow-y-hidden">
-      <div className="logo p-4 flex gap-2 items-center">
-        <h1 className=" font-black text-3xl happy-font" data-text={"HARSH"}>
-          {"HARSH"}
-        </h1>{" "}
-        <div className="line w-2 rotate-180 rounded-3xl bg-black h-full"></div>
-        <p className="text-wrap w-24">A Full Stack Web/Application Developer</p>
-      </div>
+    <div className="about relative overflow-hidden">
+      
 
-      <p className=" happy-font font-semibold flex gap-4 p-8">
-        Home <p>{">"}</p> about
-      </p>
+      <div className="flex justify-end">
+        <div className="navbar flex justify-center bg-white rounded-3xl w-min text-black px-4 items-center">
+          <p className=" happy-font font-semibold flex gap-4 ">
+            Home <p>{">"}</p> about
+          </p>
+          <p
+            className="url fixed top-52 opacity-5 bg-transparent  left-[-300px] dark:opacity-10 font-black text-[10rem] rotate-90 "
+            style={{
+              fontFamily: "Belgan",
+              fontSize: "15rem",
+            }}
+          >
+            ABOUT
+          </p>
+
+          <div className=" flex gap-4 top-4 z-50 right-4 rounded-3xl p-1">
+            <div
+              className="arrow cursor-pointer border-2 hover:border-3  overflow-hidden  rounded-full"
+              onClick={goBack}
+            >
+              <motion.div
+                whileHover={{
+                  x: [0, -50, 50, 0],
+                  transition: {
+                    yoyo: 1,
+                  },
+                }}
+              >
+                <ArrowBack
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                  className="p-1"
+                />
+              </motion.div>
+            </div>
+            <div className="theme">
+              <ThemeControl />
+            </div>
+          </div>
+        </div>
+      </div>
       <p
         className="url fixed top-52 opacity-5 bg-transparent  left-[-300px] dark:opacity-10 font-black text-[10rem] rotate-90 "
         style={{
@@ -74,32 +103,7 @@ const About = () => {
         </div>
         <TechSection />
       </div>
-      <div className="fixed flex gap-4 top-4 z-50 right-4 bg-white rounded-3xl p-1">
-        <div
-          className="arrow cursor-pointer border-2 hover:border-3   rounded-full"
-          onClick={goBack}
-        >
-          <motion.div
-            whileHover={{
-              x: [-50, 50, 0],
-              transition: {
-                yoyo: 1,
-                duration: 1,
-              },
-            }}
-          >
-            <ArrowBack
-              style={{
-                fontSize: "3rem",
-              }}
-              className="p-1"
-            />
-          </motion.div>
-        </div>
-        <div className="theme">
-          <ThemeControl />
-        </div>
-      </div>
+      
     </div>
   );
 };

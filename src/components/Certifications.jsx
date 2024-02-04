@@ -6,7 +6,7 @@ const Certifications = () => {
        
       <div className="marquee-container">
           <p
-            className="marquee-text text-[20rem] md:text-[25rem] "
+            className="marquee-text text-[15rem] md:text-[20rem] "
             style={{
               fontFamily: "Belgan",
               fontWeight: "900",
@@ -15,7 +15,7 @@ const Certifications = () => {
             CERTIFICATIONS.
           </p>
           <p
-            className="marquee-text2 text-[20rem] md:text-[25rem]"
+            className="marquee-text2 text-[15rem] md:text-[20rem]"
             style={{
               fontFamily: "Belgan",
               fontWeight: "900",

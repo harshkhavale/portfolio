@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Html,useProgress } from '@react-three/drei'
-import Logo from './Logo';
 const Loader = () => {
   const {progress} = useProgress();
   return (

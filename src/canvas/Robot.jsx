@@ -1,45 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
-import Loader from '../components/Loader';
-import { DirectionalLight } from 'three';
+import React, { Suspense, useEffect, useState, useMemo } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import Loader from "../components/Loader";
 
-const Robot = () => {
-  const [time, setTime] = useState(0);
-  const { scene } = useGLTF('../cyberpunk_speeder/scene.gltf');
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      // Update time for the floating effect
-      setTime((prevTime) => prevTime + 0.01);
-    }, 16);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  // Use Math.sin to create a floating effect
-  const positionY = Math.sin(time) * -0.2;
+const Computers = ({ isMobile }) => {
+  const computer = useGLTF("./continental/scene.gltf");
 
   return (
-    <>
-      <primitive object={scene} scale={3} position-y={positionY-0.7} position-x={0} rotation-y={0} />
-      {/* Add a directional light */}
-      <directionalLight intensity={5} position={[5, 5, 5]} />
-      
-    </>
+    <mesh>
+      <hemisphereLight intensity={50} position={[45, -35, 5]} groundColor={"white"} />
+      <pointLight position={[45, -35, 5]} intensity={10} />
+      <spotLight
+        position={[45, -30, 5]}
+        angle={0.12}
+        penumbra={1}
+        intensity={10}
+        castShadow
+        shadow-mapsize={1024}
+      />
+      <primitive object={computer.scene} scale={10} position-y={-8} rotation-y={0} />
+    </mesh>
   );
 };
 
-const RobotCanvas = () => {
+const OptimizedComputers = React.memo(Computers);
+
+const ComputerCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width:500px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, [isMobile]);
+
   return (
-    <Canvas shadows frameloop="demand" gl={{ preserveDrawingBuffer: true }} camera={{ fov: 5, near: 0.1, far: 150, position: [-4, 15, 12] }}>
+    <Canvas frameloop="demand" shadows camera={{ position: [45, -30, 5], fov: isMobile ? 28 : 20 }}>
       <Suspense fallback={<Loader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-        <Robot />
+        <OrbitControls autoRotate={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} enableZoom={false} />
+        <OptimizedComputers isMobile={isMobile} />
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };
 
-export default RobotCanvas;
+export default ComputerCanvas;

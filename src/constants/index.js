@@ -12,8 +12,6 @@ import {
   variables,
   variablesbanner,
   variableslogo,
-  genesisbanner,
-  genesislogo,
   spotifybanner,
   socialbanner,
   airbnbbanner,
@@ -53,7 +51,7 @@ import {
   php,
   next,
 } from "../assets";
-import { urbananalysis, urbancartmobile, urbandetail, urbandetailmobile, urbanmain, urbanmainmobile, urbanshowcase, urbansigninmobile, urbanstorebanner, urbanstorelogo } from "../assets/projects";
+import { socialanime, spotifyanime, spotifydashboard, spotifydashboardmobile, spotifylogo, spotifymain, spotifymainmobile, urbananalysis, urbancartmobile, urbandetail, urbandetailmobile, urbanmain, urbanmainmobile, urbanshowcase, urbansigninmobile, urbanstorebanner, urbanstorelogo } from "../assets/projects";
 export const navLinks = [
   {
     id: "about",
@@ -384,66 +382,10 @@ export const projects = [
       to: "/urbanstore",
     },
   },
-  {
-    title: "GENESIS",
-    bannerImg: genesisbanner,
-    tagline: "let's get up to date",
-    technologies: [
-      "ASP.NET",
-      "C#",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstarp",
-      "RazorPay",
-    ],
-    theme: "#17202A",
-    theme2: "#41566e",
-    theme2: "#232426",
-    color: "#FDFEFE",
-    logo: genesislogo,
-    startDate: "Nov/2022",
-    endDate: "Jan/2023",
-    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    deploy: null,
-    headerText: "variables is an Digital electronics gadget ecommerse website.",
-    slider: [
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-    ],
-    pages: [
-      {
-        title: "Home",
-        image: variables,
-        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
-      },
-    ],
-    mobile: [
-      {
-        image: urbanstorelogo,
-      },
-      {
-        image: urbanstorelogo,
-      },
-    ],
-    next: {
-      title: "URBANSTORE",
-      to: "/urbanstore",
-    },
-  },
+ 
   {
     title: "SPOTIFY",
-    bannerImg: spotifybanner,
+    bannerImg:spotifybanner,
     tagline: "let's get up to date",
     technologies: [
       "ASP.NET",
@@ -454,11 +396,11 @@ export const projects = [
       "Bootstarp",
       "RazorPay",
     ],
-    theme: "#0B5345",
+    theme: "#2ECC71",
     theme2: "#00ff1a",
     theme2: "#232426",
-    color: "#FDFEFE",
-    logo: urbanstorelogo,
+    color: "#FDFEF",
+    logo: spotifylogo,
     startDate: "Nov/2022",
     endDate: "Jan/2023",
     github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
@@ -467,30 +409,27 @@ export const projects = [
     slider: [
       {
         name: "Home",
-        image: variables,
+        image: spotifymain,
       },
       {
         name: "Home",
-        image: variables,
+        image: spotifydashboard,
       },
-      {
-        name: "Home",
-        image: variables,
-      },
+      
     ],
     pages: [
       {
         title: "Home",
-        image: variables,
+        image: spotifymain,
         info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
       },
     ],
     mobile: [
       {
-        image: urbanstorelogo,
+        image: spotifymainmobile,
       },
       {
-        image: urbanstorelogo,
+        image: spotifydashboardmobile,
       },
     ],
     next: {
@@ -500,7 +439,7 @@ export const projects = [
   },
   {
     title: "SOCIAL",
-    bannerImg: socialbanner,
+    bannerImg: socialanime,
     tagline: "let's get up to date",
     technologies: [
       "ASP.NET",

@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { menu, close } from "../assets";
-import { contacts, navLinks } from "../constants";
+import { logo } from "../assets";
+import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Close, DragHandleOutlined } from "@mui/icons-material";
-
+import ThemeControl from "./ThemeControl";
 const Navbar = () => {
   const dispatch = useDispatch();
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
   return (
     <div className="z-50  navbar flex justify-center pt-2">
-      <div className="navbar w-full px-4 flex justify-between">
-        <div className="logo flex gap-4 items-center">
-          <h1 className=" font-black text-5xl" data-text={"HARSH"} style={{fontFamily:'Belgan'}}>
-            {"HARSH"}
-          </h1>{" "}
-          <div className="line w-1 rotate-180 rounded-3xl bg-current h-full"></div>
-          <p className="text-wrap w-24">
-            A Full Stack Web/Application Developer
-          </p>
+      <div className="navbar w-full px-4 flex gap-2 justify-between items-center">
+        <div className="logo flex gap-4 items-center ">
+          <img src={logo} alt="" className="w-14 h-14 " />
+          <div className="line  rotate-180 bg-white p-1 h-16"></div>
+          <div>
+          <p className="text-wrap text-[1.7rem] font-bold -my-2" style={{fontFamily:'Belgan'}}>HARSH</p>
+          <p className="text-wrap font-bold text-[1.3rem] -my-2 " style={{fontFamily:'Belgan'}}>KHAVALE</p>
+          </div>
+         
+
         </div>
         <div className="links">
-          <ul className="list-none hidden sm:flex flex-row items-center gap-10">
+          <ul className="list-none hidden sm:flex flex-row items-center gap-10 rounded-2xl border-2 border-current p-2">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -36,9 +36,15 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                <a href={`#${link.id}`}> {link.title}</a>
+                <a href={`${link.id}`} className="happy-font font-bold">
+                  {" "}
+                  {link.title}
+                </a>
               </li>
             ))}
+            <li>
+              <ThemeControl />
+            </li>
           </ul>
         </div>
         <div
@@ -64,7 +70,11 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                <a href={`#${link.id}`} style={{ fontFamily: "Belgan" }} className="text-3xl font-black text-center">
+                <a
+                  href={`${link.id}`}
+                  style={{ fontFamily: "Belgan" }}
+                  className="text-3xl font-black text-center"
+                >
                   {link.title}
                 </a>
               </li>

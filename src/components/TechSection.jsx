@@ -2,14 +2,21 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { frameworks, database, webtools, backendtech,mobiletech, frontend } from "../constants";
+import {
+  frameworks,
+  database,
+  webtools,
+  backendtech,
+  mobiletech,
+  frontend,
+} from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { backend } from "../assets";
 import RobotCanvas from "../canvas/Robot";
 const TechCard = ({ name, index, icon }) => {
   return (
-    <Tilt className=" shadow-2xl dark:bg-white rounded-xl">
+    <Tilt className=" shadow-2xl dark:bg-white p-1 m-1 rounded-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full  p-[1px]  "
@@ -22,8 +29,7 @@ const TechCard = ({ name, index, icon }) => {
           }}
           className=" overflow-hidden flex justify-evenly items-center flex-col "
         >
-          <img src={icon} alt={name} className="w-16 h-16 object-contain" />
-          
+          <img src={icon} alt={name} className="w-16 h-16 object-contain -rotate-45" />
         </div>
       </motion.div>
     </Tilt>
@@ -33,74 +39,71 @@ const TechCard = ({ name, index, icon }) => {
 const TechSection = () => {
   return (
     <div>
-      <div className="flex flex-row-reverse items-center">
-      <div className="w-5/12">
-      <p style={{fontFamily:'Belgan'}} className="text-[7rem]">My Tech Bucket</p>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 0.1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe fugiat
-        eius dignissimos! Velit quaerat inventore suscipit voluptatum tempore
-        voluptate unde culpa corporis assumenda voluptatibus tenetur quasi
-        impedit atque sed soluta, dolores consectetur deleniti
-      </motion.p>
-      </div>
-      <div className="tech mt-20 w-7/12">
-      <div className="mobiletech mt-4">
-         
-         <div className=" w-full flex flex-wrap gap-12">
-           {mobiletech.map((service, index) => (
-             <TechCard key={service.title} index={index} {...service} />
-           ))}
-         </div>{" "}
-       </div>
-        <div className="backend mt-4">
-          
-          <div className=" w-full flex flex-wrap gap-8">
-            {backendtech.map((service, index) => (
-              <TechCard key={service.title} index={index} {...service} />
-            ))}
-          </div>{" "}
-        </div>
-       
-        <div className="frontend my-8">
-         
-         <div className=" w-full flex flex-wrap  gap-4">
-           {frontend.map((service, index) => (
-             <TechCard key={service.title} index={index} {...service} />
-           ))}
-         </div>{" "}
-       </div>
+      <div className="flex flex-row-reverse items-center w-full bg-yellow-400">
+        <div className=" flex w-4/12  flex-col">
+          <p style={{ fontFamily: "Belgan" }} className="text-[8rem]">
+            Tech
+          </p>
+          <p style={{ fontFamily: "Belgan" }} className="text-[12rem] -my-28">
+            Bucket
+          </p>
 
-       <div className="frameworks mt-4">
-        
-         <div className=" w-full flex flex-wrap  gap-8">
-           {frameworks.map((service, index) => (
-             <TechCard key={service.title} index={index} {...service} />
-           ))}
-         </div>{" "}
-       </div>
-        <div className="databases mt-4">
-        
-          <div className=" w-full flex flex-wrap  gap-10">
-            {database.map((service, index) => (
-              <TechCard key={service.title} index={index} {...service} />
-            ))}
-          </div>{" "}
+          <p className="my-20">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
+            amet esse maiores. Non aperiam dolor, temporibus numquam accusamus
+            suscipit saepe illum beatae, eaque error recusandae.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
+            amet esse maiores. Non aperiam dolor, temporibus numquam accusamus
+            suscipit saepe illum beatae, eaque error recusandae.
+          </p>
         </div>
-        <div className="web-tools mt-4">
-         
-          <div className=" w-full flex flex-wrap  gap-12">
-            {webtools.map((service, index) => (
-              <TechCard key={service.title} index={index} {...service} />
-            ))}
-          </div>{" "}
+        <div className="tech w-6/12 bg-red-400 mt-20">
+          <div className="mobiletech mt-4">
+            <div className=" w-full flex flex-wrap rotate-45 justify-center gap-12">
+              {mobiletech.map((service, index) => (
+                <TechCard key={service.title} index={index} {...service} />
+              ))}
+            </div>{" "}
+          </div>
+          <div className="backend mt-4">
+            <div className=" w-full flex flex-wrap rotate-45 justify-center gap-8">
+              {backendtech.map((service, index) => (
+                <TechCard key={service.title} index={index} {...service} />
+              ))}
+            </div>{" "}
+          </div>
+
+          <div className="frontend my-8">
+            <div className=" w-full flex flex-wrap rotate-45 ">
+              {frontend.map((service, index) => (
+                <TechCard key={service.title} index={index} {...service} />
+              ))}
+            </div>{" "}
+          </div>
+
+          <div className="frameworks my-4">
+            <div className=" w-full flex flex-wrap rotate-45 gap-8">
+              {frameworks.map((service, index) => (
+                <TechCard key={service.title} index={index} {...service} />
+              ))}
+            </div>{" "}
+          </div>
+          <div className="databases my-8">
+            <div className=" w-full flex flex-wrap rotate-45 gap-10">
+              {database.map((service, index) => (
+                <TechCard key={service.title} index={index} {...service} />
+              ))}
+            </div>{" "}
+          </div>
+          <div className="web-tools my-6">
+            <div className=" w-full flex flex-wrap rotate-45  gap-12">
+              {webtools.map((service, index) => (
+                <TechCard key={service.title} index={index} {...service} />
+              ))}
+            </div>{" "}
+          </div>
         </div>
       </div>
-      </div>
-    
-      
     </div>
   );
 };

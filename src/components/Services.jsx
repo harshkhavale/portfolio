@@ -10,7 +10,7 @@ import TextOutline from "./TextOutline";
 import { blob1 } from "../assets";
 const ServiceCard = ({ title, index, icon, animation, description }) => {
   return (
-    <div className="xs:w-[250px] dark:bg-slate-900 dark:text-white bg-white md:w-5/12 shadow-xl rounded-2xl">
+    <div className="xs:w-[250px] dark:bg-zinc-700 dark:text-white bg-white md:w-5/12 shadow-xl rounded-2xl">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full  p-[1px] rounded-[20px] shadow-card"
