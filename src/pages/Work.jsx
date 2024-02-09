@@ -67,7 +67,7 @@ const Work = () => {
 
   return (
     <div>
-      <div className="flex justify-end pt-2">
+      <div className="flex justify-end pt-2 overflow-x-hidden">
         <div className="navbar flex justify-center gap-6  rounded-3xl w-min  px-4 items-center">
           <p className=" happy-font font-semibold flex gap-4  italic">
             Home <p>{">"}</p> work

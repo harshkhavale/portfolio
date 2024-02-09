@@ -9,6 +9,9 @@ import {
   blob1,
   blob2,
   blob3,
+  gradientcolor,
+  gradientcolor2,
+  gradientwhite,
   grayblob,
   profile,
   sphere,
@@ -47,9 +50,8 @@ const Hero = () => {
         <div className="mx-auto flex flex-row items-start gap-5">
           <div>
             <div className="flex ">
-              <h1 className={`${styles.heroSubText} w-full`}  style={{
-          fontFamily: "Belgan",
-        }}>
+              
+              <h1 className={`${styles.heroSubText} w-full`}  >
                 {" "}
                 Hey there , I' m{" "}
               </h1>
@@ -57,9 +59,7 @@ const Hero = () => {
               <SubHeroSection />
             </div>
             <div className=" "></div>
-            <p className={`${styles.heroSubText} mt-20 md:mt-32 text-[20px] `}  style={{
-          fontFamily: "Belgan",
-        }}>
+            <p className={`${styles.heroSubText} mt-20 md:mt-32 text-[20px] `}  >
               {" "}
               A full stack web and mobile application developer.
             </p>
@@ -87,9 +87,9 @@ const Hero = () => {
           className="relative rounded-b-full z-50"
         />
         <img
-          src={grayblob}
+          src={gradientcolor2}
           alt=""
-          className="absolute top-14 right-[-20px] "
+          className="absolute top-14 z-10 right-[-20px] "
         />
       </motion.div>
     </div>

@@ -1,9 +1,15 @@
 import React from "react";
-import { coder, google, javascriptCertificate } from "../assets";
+import {
+  coder,
+  google,
+  gradientcolor,
+  javascriptCertificate,
+  problemSolvingCertificate,
+} from "../assets";
 import { contacts, certificates } from "../constants";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 import StackedCards from "../components/StackedCards";
 import ScrollCards from "../components/ScrollCards";
 import Navbar from "../components/Navbar";
@@ -30,11 +36,11 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col">
-              <div className="flex justify-center">
-                <p className=" text-2xl  happy-font">through</p>
+              <div className="flex justify-end md:justify-center">
+                <p className=" text-2xl happy-font mr-10 md:mr-0">through</p>
               </div>
 
-              <div className="flex justify-center mb-6 items-center">
+              <div className="flex justify-end md:justify-center mb-6 items-center">
                 <div className="line h-1 w-40 mx-[-13px] rounded-3xl bg-current"></div>
 
                 <KeyboardArrowRightIcon />
@@ -84,7 +90,7 @@ const Index = () => {
           <img
             src={coder}
             alt=""
-            className="coderimg w-full h-screen md:object-left-top object-cover"
+            className="coderimg w-full md:h-screen h-[80vh] my-[5rem] md:mt-0 md:object-left-top  object-cover"
             style={{
               display: "block",
               clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -148,109 +154,121 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="section2 bg-white dark:bg-[#191919] md:flex items-center z-10 p-2 relative">
-        <div className="side flex flex-col  p-8 gap-8">
+      <div className="section2 bg-white dark:bg-[#191919] md:flex items-center p-2  relative">
+        <div className="absolute top-0 -left-10 md:left-0 ">
+          <img src={gradientcolor} alt="gradient -z-50" className="" />
+        </div>
+        <div className="side flex flex-col z-40 p-8 gap-8">
           <p
-            className=" font-bold text-7xl md:text-9xl"
+            className=" font-bold text-7xl z-50 md:text-9xl"
             style={{ fontFamily: "Belgan" }}
           >
             My FEATURES
           </p>
 
-          <div className="flex">
-            <p className=" w-1/2">
+          <div className="flex gap-2">
+            <p className=" w-1/2 happy-font font-semibold text-base z-50 md:text-2xl">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
               cumque minus quis perferendis alias fuga odio tenetur earum eaque
               obcaecati!
             </p>
-            <RotatedText title={"ABOUT"} subtitle={"KNOW-MORE-KNOW-MORE"} />
+            <RotatedText
+              title={"ABOUT"}
+              subtitle={"KNOW-MORE-KNOW-MORE-KNOW-MORE"}
+            />
           </div>
         </div>
-        <div className="grid grid-cols-2 grid-rows-1">
+        {/* <div className=" md:grid flex flex-col justify-center grid-cols-2 gap-4 grid-rows-1">
           <div className="col-span-1 h-full flex justify-center items-center">
           <motion.div
-            whileHover={{
-              scale: 1.2,
-              zIndex: 10,
-              transition: { ease: "easeInOut" },
-            }}
-            className="m-1  h-min border-2 p-4 border-current relative  overflow-clip  flex-col"
-          >
-            <img
-              src={google}
-              alt=""
-              className="w-full h-full object-cover"
-            />
+              whileHover={{
+                scale: 1.2,
+                zIndex: 10,
+                transition: { ease: "easeInOut" },
+              }}
+              className="m-1  w-11/12 rounded-[1rem] border-current   h-min border-2 p-4 relative    flex-col"
+            >
             
-            <div className=" flex p-4 gap-2 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
-              <p className="text-xs md:text-base">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, totam.
-              </p>
-              <div className=" bg-white rounded-full h-min p-1 text-black">
-                <ArrowOutwardIcon />
+              <img
+                src={javascriptCertificate}
+                alt=""
+                className="md:w-full  h-full border-black object-cover"
+              />
+
+              <div className=" flex p-4 gap-2 ">
+                <p className="text-xs md:text-base">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Praesentium, totam.
+                </p>
+                <div className=" bg-white rounded-full h-min p-1 text-black">
+                  <ArrowOutwardIcon />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
           </div>
-         
-          <div className="col-span-1">
-          <motion.div
-            whileHover={{
-              scale: 1.2,
-              zIndex: 10,
-              transition: { ease: "easeInOut" },
-            }}
-            className="m-1  h-auto border-2 p-4 border-current relative  overflow-clip flex justify-center items-center flex-col"
-          >
-            <img
-              src={javascriptCertificate}
-              alt=""
-              className="w-full h-full object-cover"
-            />
+
+          <div className="md:col-span-1 ">
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                zIndex: 10,
+                transition: { ease: "easeInOut" },
+              }}
+              className="m-1  w-11/12 rounded-[1rem] border-current   h-min border-2 p-4 relative    flex-col"
+            >
             
-            <div className=" flex p-4 gap-2 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
-              <p className="text-xs md:text-base">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, totam.
-              </p>
-              <div className=" bg-white rounded-full h-min p-1 text-black">
-                <ArrowOutwardIcon />
+              <img
+                src={javascriptCertificate}
+                alt=""
+                className="md:w-full  h-full border-black object-cover"
+              />
+
+              <div className=" flex p-4 gap-2 ">
+                <p className="text-xs md:text-base">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Praesentium, totam.
+                </p>
+                <div className=" bg-white rounded-full h-min p-1 text-black">
+                  <ArrowOutwardIcon />
+                </div>
               </div>
-            </div>
-          </motion.div>
-          <motion.div
-            whileHover={{
-              scale: 1.2,
-              zIndex: 10,
-              transition: { ease: "easeInOut" },
-            }}
-            className="m-1 h-auto border-2 p-4 border-current relative  overflow-clip flex justify-center items-center flex-col"
-          >
-            <img
-              src={javascriptCertificate}
-              alt=""
-              className="w-full h-full object-cover"
-            />
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                zIndex: 10,
+                transition: { ease: "easeInOut" },
+              }}
+              className="m-1  w-11/12 rounded-[1rem] border-current   h-min border-2 p-4 relative    flex-col"
+            >
             
-            <div className=" flex p-4 gap-2 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
-              <p className="text-xs md:text-base">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, totam.
-              </p>
-              <div className=" bg-white rounded-full h-min p-1 text-black">
-                <ArrowOutwardIcon />
+              <img
+                src={javascriptCertificate}
+                alt=""
+                className="md:w-full  h-full border-black object-cover"
+              />
+
+              <div className=" flex p-4 gap-2 ">
+                <p className="text-xs md:text-base">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Praesentium, totam.
+                </p>
+                <div className=" bg-white rounded-full h-min p-1 text-black">
+                  <ArrowOutwardIcon />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
           </div>
+        </div> */}
+        <div className="ide">
+         <img src={google} alt="" />
         </div>
       </div>
 
-      <div className="section3  mb-16   ">
-        <div className="marquee-container">
+      <div className="section3  mb-16  ">
+        <div className="marquee-container z-50">
           <p
-            className="marquee-text happy-font text-[12rem] md:text-[20rem] "
+            className="marquee-text happy-font text-[12rem] md:text-[20rem] text-current "
             style={{
               // fontFamily: "Belgan",
               fontStyle: "italic",
@@ -271,11 +289,10 @@ const Index = () => {
           </p>
         </div>{" "}
       </div>
-<div className="">
-<Creative />
-      <ScrollCards />
-</div>
-    
+      <div className="">
+        <Creative />
+        <ScrollCards />
+      </div>
     </div>
   );
 };

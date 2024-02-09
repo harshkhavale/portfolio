@@ -20,9 +20,12 @@ const VerticalScrollCarousel = () => {
       <div className="sticky top-0  flex  h-[150vh] items-center overflow-hidden">
         <div className="certificates absolute top-0 -z-30">
           {isNonMobileScreens && (
-            <div className="mt-32 font-semibold text-2xl px-16 w-[40rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              illum ea ducimus deleniti maxime optio.
+            <div className="mt-32 font-semibold text-2xl px-16 happy-font w-[40rem]">
+              My certificates represent a testament to my dedication and
+              expertise in various fields. Whether it's academic achievements,
+              professional qualifications, or specialized training, each
+              certificate symbolizes my commitment to continual learning and
+              growth.
             </div>
           )}
           <Certifications />
@@ -48,7 +51,7 @@ const VerticalScrollCarousel = () => {
           {isNonMobileScreens && (
             <motion.div
               style={{ y }}
-              className="  flex p-8 flex-col md:mt-[100vh] gap-4"
+              className="  flex p-8 flex-col md:mt-[150vh] gap-4"
             >
               {certificates.map((certificate, index) => (
                 <div
@@ -76,9 +79,11 @@ const ScrollCards = () => {
   return (
     <div className=" ">
       {!isNonMobileScreens && (
-        <div className="flex items-center justify-center  font-semibold text-2xl px-16 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          illum ea ducimus deleniti maxime optio.
+        <div className="flex items-center justify-center happy-font font-semibold text-2xl px-16 ">
+          My certificates represent a testament to my dedication and expertise
+          in various fields. Whether it's academic achievements, professional
+          qualifications, or specialized training, each certificate symbolizes
+          my commitment to continual learning and growth
         </div>
       )}
       <VerticalScrollCarousel />

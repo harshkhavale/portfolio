@@ -22,9 +22,8 @@ import {
   linuxcertificate,
   angular,
 } from "../assets";
-import XIcon from '@mui/icons-material/X';
+import XIcon from "@mui/icons-material/X";
 import {
-  
   css,
   figma,
   github,
@@ -51,8 +50,25 @@ import {
   php,
   next,
 } from "../assets";
-import { socialanime, spotifyanime, spotifydashboard, spotifydashboardmobile, spotifylogo, spotifymain, spotifymainmobile, urbananalysis, urbancartmobile, urbandetail, urbandetailmobile, urbanmain, urbanmainmobile, urbanshowcase, urbansigninmobile, urbanstorebanner, urbanstorelogo } from "../assets/projects";
-import { X } from "@mui/icons-material";
+import {
+  socialanime,
+  spotifyanime,
+  spotifydashboard,
+  spotifydashboardmobile,
+  spotifylogo,
+  spotifymain,
+  spotifymainmobile,
+  urbananalysis,
+  urbancartmobile,
+  urbandetail,
+  urbandetailmobile,
+  urbanmain,
+  urbanmainmobile,
+  urbanshowcase,
+  urbansigninmobile,
+  urbanstorebanner,
+  urbanstorelogo,
+} from "../assets/projects";
 export const navLinks = [
   {
     id: "about",
@@ -95,26 +111,30 @@ export const contacts = [
     id: "X",
     title: "X",
     url: "https://twitter.com/HarshKhavale",
-    icon: <XIcon/>,
+    icon: <XIcon />,
   },
 ];
 export const services = [
   {
     title: "Web Developer",
     animation: webanimation,
-    text: "Web Developer",
+    description:
+      "As a web developer skilled in React, Next.js, and Angular, I specialize in crafting dynamic and user-friendly web applications. Leveraging the power of component-based architecture, I create reusable UI elements to streamline development processes. With a keen eye for design and a knack for optimization, I ensure that each project delivers an exceptional user experience. My expertise extends to various front-end technologies, allowing me to adapt and innovate to meet the unique needs of each client.",
   },
   {
-    title: "Mobile Developer",
+    title: "Mobile Application Developer",
     animation: appanimation,
+    description:"As a mobile application developer proficient in Android, React Native, and Flutter, I excel in creating engaging and feature-rich mobile experiences. Leveraging the flexibility of React Native and Flutter, I develop cross-platform applications with native-like performance. My expertise in Android development ensures that I can build robust, platform-specific applications tailored to the needs of the Android ecosystem. Whether it's crafting sleek UIs, optimizing performance, or integrating complex functionalities, I bring a wealth of experience and innovation to every mobile project."
   },
   {
     title: "Backend Developer",
     animation: backendanimation,
+    description:"As a backend developer proficient in C, C++, Java, Python, JavaScript, and C#, I specialize in building robust and scalable server-side solutions. Leveraging the power of each language, I design and implement efficient algorithms and data structures to handle complex business logic and data processing tasks. Whether it's developing RESTful APIs, managing databases, or optimizing server performance."
   },
   {
     title: "UI/UX Designer",
     animation: uixanimation,
+    description:"As a UI/UX designer proficient in Figma and Canva, I specialize in creating visually stunning and user-centric digital experiences. Leveraging the powerful features of Figma, I design elegant and responsive interfaces, collaborating seamlessly with cross-functional teams. With Canva, I bring creativity to the forefront, producing captivating graphics and illustrations that enhance user engagement. Whether it's wireframing, prototyping, or creating polished designs, I blend expertise with creativity to deliver compelling solutions."
   },
 ];
 const frontend = [
@@ -376,7 +396,7 @@ export const projects = [
         image: urbancartmobile,
       },
       {
-        image:urbandetailmobile,
+        image: urbandetailmobile,
       },
     ],
     next: {
@@ -384,10 +404,10 @@ export const projects = [
       to: "/urbanstore",
     },
   },
- 
+
   {
     title: "SPOTIFY",
-    bannerImg:spotifybanner,
+    bannerImg: spotifybanner,
     tagline: "let's get up to date",
     technologies: [
       "ASP.NET",
@@ -417,7 +437,6 @@ export const projects = [
         name: "Home",
         image: spotifydashboard,
       },
-      
     ],
     pages: [
       {

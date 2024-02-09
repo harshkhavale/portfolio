@@ -14,9 +14,9 @@ const RotatedText = ({ title, subtitle, link }) => {
 
   return (
     <div className="circle dark:text-white text-black ">
-      <div className="font-bold text-3xl">{title}</div>
+      <div className="font-bold happy-font md:text-3xl">{title}</div>
       <div className="text">
-        <p className="text-3xl font-bold" style={{ fontFamily: "Belgan" }}>
+        <p className="md:text-3xl font-bold" style={{ fontFamily: "Belgan" }}>
           {subtitle}
         </p>
       </div>

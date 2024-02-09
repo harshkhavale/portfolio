@@ -25,7 +25,7 @@ const Navbar = () => {
             !isNonMobileScreens ? "" : ""
           } `}
         >
-          <img src={logo} alt="" className="w-14 h-14 " />
+          <img src={logo} alt="" className="w-14 h-14 rounded-md " />
           <div className="line  rotate-180 bg-current p-1 h-16"></div>
           <div>
             <p
@@ -35,7 +35,7 @@ const Navbar = () => {
               HARSH
             </p>
             <p
-              className="text-wrap font-bold text-[1.3rem] -my-2 "
+              className="text-wrap font-bold text-[1.7rem] -my-2 "
               style={{ fontFamily: "Belgan" }}
             >
               KHAVALE
@@ -43,32 +43,30 @@ const Navbar = () => {
           </div>
         </div>
         <div className="links">
-          <ul className="list-none hidden sm:flex flex-row items-center gap-10 rounded-2xl border-2 border-current p-2">
+          <ul className="list-none hidden sm:flex flex-row items-center gap-10 rounded-2xl  p-2">
             {navLinks.map((link) => (
               <li
                 key={link.id}
                 className={`${
-                  active === link.title
-                    ? "outline p-2 rounded-3xl"
-                    : "text-secondary"
-                } hover:underline underline-offset-8   cursor-pointer`}
+                  active === link.title ? " p-2" : "text-secondary"
+                } hover:underline underline-offset-[1rem]   cursor-pointer`}
                 onClick={() => {
                   setActive(link.title);
                 }}
               >
-                <a href={`${link.id}`} className="happy-font font-bold">
-                  {" "}
-                  {link.title}
+                <a href={`${link.id}`} className=" happy-font font-semibold">
+                  {""}
+                  {link.id}
                 </a>
               </li>
             ))}
-            <li>
-              <ThemeControl />
-            </li>
           </ul>
         </div>
-
-       
+        {isNonMobileScreens && (
+          <div>
+            <ThemeControl />
+          </div>
+        )}
 
         <div
           className="sm:hidden cursor-pointer flex flex-1 justify-end dark:text-white text-black items-center"
@@ -76,7 +74,11 @@ const Navbar = () => {
         >
           {toggle ? <DragHandleOutlined /> : <Close />}
         </div>
-       {!isNonMobileScreens && ( <div ><ThemeControl /></div>)}
+        {!isNonMobileScreens && (
+          <div>
+            <ThemeControl />
+          </div>
+        )}
         <div
           className={`${
             toggle ? "hidden" : "flex-col"

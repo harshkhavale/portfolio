@@ -68,6 +68,10 @@ import logo from './logo.png'
 import roboz from './roboz.jpg'
 import coder from './coder.png'
 import google from './certificates/google.png';
+import gradientcolor from './gradientcolor.png';
+import gradientcolor2 from './gradientcolor2.png';
+import scratch from './scratch.png';
+import gradientwhite from './gradientwhite.png';
 export {
   javascriptCertificate,
   problemSolvingCertificate,
@@ -76,7 +80,7 @@ export {
   dsacertificate,
   google,
 };
-export { variables,logo,robox};
+export { variables,logo,robox,gradientcolor,gradientcolor2,gradientwhite,scratch};
 export {
   variablesbanner,
   spotifybanner,

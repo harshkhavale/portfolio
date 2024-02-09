@@ -1,11 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import {
-  CircleNotifications,
-  FireExtinguisher,
- 
-} from "@mui/icons-material";
-import {logo, pattern, room } from "../assets";
+import { CircleNotifications, FireExtinguisher } from "@mui/icons-material";
+import { logo, pattern, room } from "../assets";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ThemeControl from "./ThemeControl";
@@ -16,11 +12,11 @@ const IDELayout = () => {
   useEffect(() => {
     window.onload = function () {
       gsap.registerPlugin(ScrollTrigger);
-  
+
       gsap.to(".asch", {
         scrollTrigger: {
           trigger: ".pallate",
-          screenX:100,
+          screenX: 100,
           yPercent: -100,
           duration: 5,
           markers: true,
@@ -29,10 +25,9 @@ const IDELayout = () => {
       });
     };
   }, []);
-  
 
   return (
-    <div className="idelayout  h-[600rem] relative text-xs  ">
+    <div className="idelayout relative text-xs  ">
       <div className="ide sticky top-0 h-[40rem]">
         <motion.div
           // animate={{ rotateX: 30, rotateY: 10, rotateZ: -10 }}
@@ -197,13 +192,17 @@ const IDELayout = () => {
           <div className="image absolute top-52 -right-10 w-52 h-60 border-4 shadow-3xl border-gray-500 rounded-2xl overflow-hidden">
             <img src={pattern} alt="" className="w-full h-full object-cover" />
           </div>
-        <img src={logo} alt="" className="w-20 h-20 absolute top-10  z-50 bg-white shadow-2xl rounded-2xl"/>
+          <img
+            src={logo}
+            alt=""
+            className="w-20 h-20 absolute top-10  z-50 bg-white shadow-2xl rounded-2xl"
+          />
         </motion.div>
         <div className="asch"></div>
       </div>
       <div className="absolute top-0 z-50">
-      <ThemeControl/>
-<TimeClock/>
+        <ThemeControl />
+        <TimeClock />
       </div>
     </div>
   );
