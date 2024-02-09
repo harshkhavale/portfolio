@@ -167,7 +167,7 @@ const Index = () => {
           </p>
 
           <div className="flex gap-2">
-            <p className=" w-1/2 happy-font font-semibold text-base z-50 md:text-2xl">
+            <p className=" w-1/2 happy-font font-semibold text-xs z-50 md:text-2xl">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
               cumque minus quis perferendis alias fuga odio tenetur earum eaque
               obcaecati!

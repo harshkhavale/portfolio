@@ -33,7 +33,7 @@ const VerticalScrollCarousel = () => {
         <div className="flex justify-end w-full gap-0">
           <motion.div
             style={{ y }}
-            className=" flex  p-8 flex-col -mt-96 md:mt-[200vh] gap-2"
+            className=" flex  p-8 flex-col mt-0 md:mt-[200vh] gap-2"
           >
             {certificates.map((certificate, index) => (
               <div
@@ -79,7 +79,7 @@ const ScrollCards = () => {
   return (
     <div className=" ">
       {!isNonMobileScreens && (
-        <div className="flex items-center justify-center happy-font font-semibold text-2xl px-16 ">
+        <div className="flex items-center justify-center happy-font font-semibold text-xs md:text-2xl px-2 md:px-16 ">
           My certificates represent a testament to my dedication and expertise
           in various fields. Whether it's academic achievements, professional
           qualifications, or specialized training, each certificate symbolizes

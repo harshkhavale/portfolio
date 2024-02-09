@@ -69,10 +69,10 @@ const Navbar = () => {
         )}
 
         <div
-          className="sm:hidden cursor-pointer flex flex-1 justify-end dark:text-white text-black items-center"
+          className="sm:hidden cursor-pointer flex z-50 flex-1 justify-end dark:text-white text-black items-center"
           onClick={() => setToggle(!toggle)}
         >
-          {toggle ? <DragHandleOutlined /> : <Close />}
+          {toggle ? <DragHandleOutlined /> : <Close className="border rounded-full border-black" style={{color:'black',fontSize:'5rem'}} />}
         </div>
         {!isNonMobileScreens && (
           <div>
@@ -82,9 +82,9 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? "hidden" : "flex-col"
-          } p-6 bg-current absolute top-20 right-0 mx-4 my-2 w-full  z-10 rounded-b-3xl`}
+          } bg-current fixed top-0 start-0 w-screen p-4 h-screen flex justify-center  z-10 rounded-bl-[10rem]`}
         >
-          <ul className="list-none my-2 flex justify-end items-start flex-col gap-4">
+          <ul className="list-none my-2 flex  flex-col gap-4">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -98,8 +98,7 @@ const Navbar = () => {
               >
                 <a
                   href={`${link.id}`}
-                  style={{ fontFamily: "Belgan" }}
-                  className="text-3xl font-black text-center"
+                  className="text-5xl happy-font font-bold text-center"
                 >
                   {link.title}
                 </a>

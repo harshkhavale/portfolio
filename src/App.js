@@ -16,7 +16,7 @@ import IDELayout from "./components/IDELayout";
 import Footer from "./components/Footer";
 const App = () => {
   return (
-    <div className=" dark:text-white dark:bg-[#191919] ">
+    <div className=" dark:text-white dark:bg-[#191919] bg-white text-black ">
       <BrowserRouter>
         <AnimatePresence>
           <Routes>
